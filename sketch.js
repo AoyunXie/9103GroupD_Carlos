@@ -42,7 +42,85 @@ function draw() {
    translate(131, 489);     
    drawLinGroup(0, 0, 100, 3, 1, 1, 255); 
    pop();
- }
+push();     
+  translate(110, 383); 
+  drawLinGroup(0, 0, 80, 1, 1, 4, 255);  
+  pop();
+
+  
+  push();
+  translate(115, 392); 
+  drawLinGroup(0, 0, 80, 1, 1, 3, 255);
+  pop();
+
+
+
+  // 粗2图：右中部，两条倾斜粗线，分开写
+
+  // 第一条线（上）
+  push();
+  translate(515, 315); // 初始位置
+  drawLinGroup(0, 0, 100, 1, 1,8, 255);
+  pop();
+
+  // 第二条线（下）
+  push();
+  translate(510, 332); // Y稍往下，X稍往左形成倾斜感
+  drawLinGroup(0, 0, 100, 1, 1, 6, 255);
+  pop();
+
+
+
+  // 粗3图：中央偏上，三条左高右低的斜线，分开写
+
+  // 第一条线（最上，最短）
+  push();
+  translate(454, 316);
+  drawLinGroup(0, 0, 30, 1, 1, 12, 255);
+  pop();
+
+  // 第二条线（中，略长）
+  push();
+  translate(440, 336);
+  drawLinGroup(0, 0, 50, 1, 1, 8, 255);
+  pop();
+
+  // 第三条线（最下，最长）
+  push();
+  translate(432, 347);
+  drawLinGroup(0, 0, 70, 1, 1, 5, 255);
+  pop();
+
+
+
+  // === 上方两条倾斜粗线（组成梯形） ===
+
+  // 上线（稍短，稍上，偏粗）
+  push();
+  translate(190, 348);
+  drawLinGroup(0, 0, 190, 1, 1, 8, 255);
+  pop();
+
+  // 下线（更长，略低，稍微偏右）
+  push();
+  translate(196, 364);
+  drawLinGroup(0, 0, 179, 1, 1, 8, 255);
+  pop();
+
+  // === 下方两条短线（倒三角结构） ===
+
+  // 上短线（短，小）
+  push();
+  translate(240, 438);
+  drawLinGroup(0, 0, 20, 1, 1, 8, 255);
+  pop();
+
+  // 下短线（略粗）
+  push();
+  translate(246, 452);
+  drawLinGroup(0, 0, 10, 1, 1, 8, 255);
+  pop();
+}
 
 function drawLinGroup(x, y, len, count, spacing, weight, alpha) {
   strokeWeight(weight);
