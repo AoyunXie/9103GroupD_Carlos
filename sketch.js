@@ -17,7 +17,7 @@ function draw() {
   rotate(radians(-30));
 
   // Step 4: 移回左上角坐标
-  translate(-width / 2, -height / 2);
+   translate(-430, -470);      
 
   // Thick 5
   push();
