@@ -1,18 +1,33 @@
 function setup() {
   createCanvas(800, 600);
   background(247,241,225)
+  
 }
 
 function draw() {
+  push();
+
+  // Step 1: 把中心移到画布中心
+  translate(width / 2, height / 2);
+
+  // Step 2: 统一缩小一点，避免线出界
+  scale(0.8);
+
+  // Step 3: 旋转整体 30 度
+  rotate(radians(-30));
+
+  // Step 4: 移回左上角坐标
+  translate(-width / 2, -height / 2);
+
   // Thick 5
   push();
   translate(189, 343);       
-  drawLinGroup(0, 0, 500, 2, 1, 1, 255);  
+  drawLinGroup(0, 0, 500, 2, 1, 1, 200);  
   pop();
 
   push();
   translate(198, 360);
-  drawLinGroup(0, 0, 350, 2, 1, 1, 255);  
+  drawLinGroup(0, 0, 350, 2, 1, 1, 200);  
   pop();
 
  // Thick 6
@@ -42,86 +57,67 @@ function draw() {
   translate(131, 489);     
   drawLinGroup(0, 0, 100, 3, 1, 1, 255); 
   pop();
-push();     
+
+// Thick 1
+  push();     
   translate(110, 383); 
-  drawLinGroup(0, 0, 80, 1, 1, 4, 255);  
+  drawLinGroup(0, 0, 80, 4, 1, 1, 255);  
   pop();
 
-  
   push();
   translate(115, 392); 
-  drawLinGroup(0, 0, 80, 1, 1, 3, 255);
+  drawLinGroup(0, 0, 80, 3, 1, 1, 255);
   pop();
-
-
-
-  // 粗2图：右中部，两条倾斜粗线，分开写
-
-  // 第一条线（上）
+ 
+// Thick 2
   push();
-  translate(515, 315); // 初始位置
-  drawLinGroup(0, 0, 100, 1, 1,8, 255);
+  translate(515, 315); 
+  drawLinGroup(0, 0, 100, 4, 1, 1, 255);
   pop();
 
-  // 第二条线（下）
   push();
-  translate(510, 332); // Y稍往下，X稍往左形成倾斜感
-  drawLinGroup(0, 0, 100, 1, 1, 6, 255);
+  translate(510, 332); 
+  drawLinGroup(0, 0, 100, 4, 1, 1, 255);
   pop();
 
-
-
-  // 粗3图：中央偏上，三条左高右低的斜线，分开写
-
-  // 第一条线（最上，最短）
+// Thick 3
   push();
   translate(454, 316);
-  drawLinGroup(0, 0, 30, 1, 1, 12, 255);
+  drawLinGroup(0, 0, 30, 5, 1, 1, 255);
   pop();
 
-  // 第二条线（中，略长）
   push();
   translate(440, 336);
-  drawLinGroup(0, 0, 50, 1, 1, 8, 255);
+  drawLinGroup(0, 0, 50, 5, 1, 1, 255);
   pop();
 
-  // 第三条线（最下，最长）
   push();
   translate(432, 347);
-  drawLinGroup(0, 0, 70, 1, 1, 5, 255);
+  drawLinGroup(0, 0, 70, 5, 1, 1, 255);
   pop();
 
-
-
-  // === 上方两条倾斜粗线（组成梯形） ===
-
-  // 上线（稍短，稍上，偏粗）
+//Thick 4
   push();
   translate(190, 348);
-  drawLinGroup(0, 0, 190, 1, 1, 8, 255);
+  drawLinGroup(0, 0, 190, 6, 1, 1, 255);
   pop();
 
-  // 下线（更长，略低，稍微偏右）
   push();
   translate(196, 364);
-  drawLinGroup(0, 0, 179, 1, 1, 8, 255);
+  drawLinGroup(0, 0, 179, 6, 1, 1, 255);
   pop();
 
-  // === 下方两条短线（倒三角结构） ===
-
-  // 上短线（短，小）
   push();
   translate(240, 438);
-  drawLinGroup(0, 0, 20, 1, 1, 8, 255);
+  drawLinGroup(0, 0, 20, 6, 1, 1, 255);
   pop();
 
-  // 下短线（略粗）
   push();
   translate(246, 452);
-  drawLinGroup(0, 0, 10, 1, 1, 8, 255);
+  drawLinGroup(0, 0, 10, 6, 1, 1, 255);
   pop();
 
-  //Thin 1
+//Thin 1
   push();
   translate(125, 448);
   drawLinGroup(0, 0, 600, 22, 2.5, 0.2, 120)
@@ -132,7 +128,7 @@ push();
   drawLinGroup(0, 0, 600, 22, 2.5, 1, 255)
   pop();
 
-  //Thin 2
+//Thin 2
   push();
   translate(137,320);
   drawTrapezoidLines(0, 18, 34, 52, 0, 20, 3, 255);
@@ -148,7 +144,7 @@ push();
   drawTrapezoidLines(0, 18, 34, 52, 0, 20, 3, 255);
   pop();
 
-  //Trapezoid3
+//Trapezoid3
   push();
   translate(190,356);
   drawTrapezoidLines(0, 80, 23, 55, 0, 15, 2.5, 255);
@@ -159,7 +155,7 @@ push();
   drawTrapezoidLines(0, 103, 14, 85, 0, 13, 2, 255);
   pop();
 
-  //Trapezoid2
+//Trapezoid2
   push();
   translate(110,320);
   drawTrapezoidLines(0, 165, 40, 115, 0, 30, 2.5, 255);
@@ -175,7 +171,7 @@ push();
   drawTrapezoidLines(0, 145, 0, 120, 0, 13, 3.2, 255);
   pop();
 
-  //Trapezoid1
+//Trapezoid1
   push();
   translate(135, 440);
   drawTrapezoidLines(0, 255, 0, 215, 0, 25, 2.5, 255);
@@ -195,16 +191,18 @@ push();
   translate(400,522);
   drawTrapezoidLines(0, 120, -40, 130, 0, 20, 3, 255);
   pop();
+
+ pop();
 }
 
-function drawLinGroup(x, y, len, count, spacing, weight, alpha) {
+function drawLinGroup(x, y, len, count, spacing, weight, baseAlpha = 255) {
   strokeWeight(weight);
-  stroke(0,alpha);
-  
-  for (let i = 0; i < count; i++){
+  for (let i = 0; i < count; i++) {
+    let alpha = map(i, 0, count - 1, 0, baseAlpha); 
+    stroke(0, alpha);
     let yOffset = y + i * spacing;
-    line(x, yOffset, x+len, yOffset)
-  } 
+    line(x, yOffset, x + len, yOffset);
+  }
 }
 
 function drawTrapezoidLines(x1, x2, x3, x4, y, h, spacing = 3, alpha = 255) {
