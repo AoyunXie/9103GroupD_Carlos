@@ -17,7 +17,7 @@ function draw() {
   rotate(radians(-30));
 
   // Step 4: 移回左上角坐标
-  translate(-width / 2, -height / 2);
+   translate(-430, -470);      
 
   // Thick 5
   push();
@@ -72,27 +72,27 @@ function draw() {
 // Thick 2
   push();
   translate(515, 315); 
-  drawLinGroup(0, 0, 100, 4, 1, 1, 255);
+  drawLinGroup(0, 0, 170, 8, 1, 1, 255);
   pop();
 
   push();
-  translate(510, 332); 
-  drawLinGroup(0, 0, 100, 4, 1, 1, 255);
+  translate(517, 350); 
+  drawLinGroup(0, 0, 170, 6, 1, 1, 255);
   pop();
 
 // Thick 3
   push();
-  translate(454, 316);
-  drawLinGroup(0, 0, 30, 5, 1, 1, 255);
-  pop();
-
-  push();
-  translate(440, 336);
-  drawLinGroup(0, 0, 50, 5, 1, 1, 255);
+  translate(448, 316);
+  drawLinGroup(0, 0, 30, 8, 1, 1, 255);
   pop();
 
   push();
   translate(432, 347);
+  drawLinGroup(0, 0, 50, 5, 1, 1, 255);
+  pop();
+
+  push();
+  translate(413, 380);
   drawLinGroup(0, 0, 70, 5, 1, 1, 255);
   pop();
 
