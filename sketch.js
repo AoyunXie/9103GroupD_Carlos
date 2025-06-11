@@ -24,39 +24,39 @@ function draw() {
   // Thick 5
   push();
   translate(189, 343);       
-  drawLinGroup(0, 0, 500, 2, 1, 1, 200);  
+  drawLinGroup(0, 0, 495, 2, 1, 1, 200);  
   pop();
 
   push();
   translate(198, 360);
-  drawLinGroup(0, 0, 350, 2, 1, 1, 200);  
+  drawLinGroup(0, 0, 320, 2, 1, 1, 200);  
   pop();
 
  // Thick 6
   push();
-  translate(424, 430);     
-  drawLinGroup(0, 0, 150, 2, 1, 1, 255); 
+  translate(445, 430);     
+  drawLinGroup(0, 0, 60, 4, 1, 1, 255); 
   pop();
 
   push();
-  translate(419, 436);     
-  drawLinGroup(0, 0, 155, 2, 1, 1, 255); 
+  translate(440, 436);     
+  drawLinGroup(0, 0, 70, 4, 1, 1, 255); 
   pop();
 
  // Thick 7
   push();
   translate(130, 550);     
-  drawLinGroup(0, 0, 600, 2, 1, 1, 255); 
+  drawLinGroup(0, 0, 595, 2, 1, 1, 255); 
   pop();
 
  // Thick 8
   push();
-  translate(423, 450);     
-  drawLinGroup(0, 0, 155, 4, 1, 1, 255); 
+  translate(432, 450);     
+  drawLinGroup(0, 0, 85, 8, 1, 1, 255); 
   pop();
 
   push();
-  translate(131, 489);     
+  translate(135, 489);     
   drawLinGroup(0, 0, 100, 3, 1, 1, 255); 
   pop();
 
@@ -90,11 +90,11 @@ function draw() {
 
   push();
   translate(432, 347);
-  drawLinGroup(0, 0, 50, 5, 1, 1, 255);
+  drawLinGroup(0, 0, 50, 8, 1, 1, 255);
   pop();
 
   push();
-  translate(413, 380);
+  translate(411, 380);
   drawLinGroup(0, 0, 70, 5, 1, 1, 255);
   pop();
 
