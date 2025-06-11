@@ -68,7 +68,7 @@ function draw() {
   translate(115, 392); 
   drawLinGroup(0, 0, 80, 3, 1, 1, 255);
   pop();
- 
+
 // Thick 2
   push();
   translate(515, 315); 
@@ -152,47 +152,47 @@ function draw() {
 
   push();
   translate(172,320);
-  drawTrapezoidLines(0, 103, 14, 85, 0, 13, 2, 255);
+  drawTrapezoidLines(0, 103, 14, 85, 0, 9, 3.2, 255);
   pop();
 
 //Trapezoid2
   push();
   translate(110,320);
-  drawTrapezoidLines(0, 165, 40, 115, 0, 30, 2.5, 255);
+  drawTrapezoidLines(0, 165, 40, 115, 0, 19, 4, 255);
   pop();
 
   push();
   translate(456,300);
-  drawTrapezoidLines(0, 56, -47, 66, 0, 35, 2.5, 255);
+  drawTrapezoidLines(0, 56, -47, 66, 0, 25, 3.5, 255);
   pop();
 
   push();
   translate(105,354);
-  drawTrapezoidLines(0, 145, 0, 120, 0, 13, 3.2, 255);
+  drawTrapezoidLines(0, 145, 0, 120, 0, 12, 3.5, 255);
   pop();
 
 //Trapezoid1
   push();
   translate(135, 440);
-  drawTrapezoidLines(0, 255, 0, 215, 0, 25, 2.5, 255);
+  drawTrapezoidLines(0, 255, 0, 215, 0, 16, 4, 255);
   pop();
 
   push();
   translate(440,440);
-  drawTrapezoidLines(0, 70, -40, 80, 0, 23, 2.5, 255);
+  drawTrapezoidLines(0, 70, -40, 80, 0, 16, 4, 255);
   pop();
 
   push();
-  translate(135,550);
-  drawTrapezoidLines(0, 201, 0, 180, 0, 12, 2.8, 255);
+  translate(128,550);
+  drawTrapezoidLines(0, 201, 0, 176, 0, 9, 4, 255);
   pop();
 
   push();
-  translate(400,522);
-  drawTrapezoidLines(0, 120, -40, 130, 0, 20, 3, 255);
+  translate(390,522);
+  drawTrapezoidLines(0, 120, -36, 130, 0, 15, 4, 255);
   pop();
 
- pop();
+  pop();
 }
 
 function drawLinGroup(x, y, len, count, spacing, weight, baseAlpha = 255) {
