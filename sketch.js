@@ -5,6 +5,7 @@ function setup() {
 
 function draw() {
   // Thick 5
+  push();
   translate(189, 343);       
   drawLinGroup(0, 0, 500, 2, 1, 1, 255);  
   pop();
