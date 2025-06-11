@@ -1,23 +1,25 @@
+let scaleFactor;
+
 function setup() {
-  createCanvas(800, 600);
-  background(247,241,225)
+  createCanvas(windowWidth, windowHeight);
+  background(247, 241, 225);
   
+  //  Based on width scaling
+  scaleFactor = min(width / 800, height / 600);  // original scale
 }
 
 function draw() {
+  background(247, 241, 225); 
   push();
 
-  // Step 1: 把中心移到画布中心
+  // Move the centre
   translate(width / 2, height / 2);
 
-  // Step 2: 统一缩小一点，避免线出界
-  scale(0.8);
+  scale(scaleFactor); 
 
-  // Step 3: 旋转整体 30 度
   rotate(radians(-30));
 
-  // Step 4: 移回左上角坐标
-   translate(-430, -470);      
+  translate(-430, -470);      
 
   // Thick 5
   push();
@@ -214,4 +216,9 @@ function drawTrapezoidLines(x1, x2, x3, x4, y, h, spacing = 3, alpha = 255) {
     let xi2 = lerp(x2, x4, i / h);
     line(xi1, yi, xi2, yi);
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  scaleFactor = min(width / 800, height / 600);
 }
