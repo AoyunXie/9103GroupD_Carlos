@@ -1,30 +1,27 @@
 let scaleFactor;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(247, 241, 225);
+  createCanvas(windowWidth, windowHeight); // Fullscreen canvas
+  background(247, 241, 225); // Light background color
   
   //  Based on width scaling
   scaleFactor = min(width / 800, height / 600);  // original scale
 }
 
 function draw() {
-  background(247, 241, 225); 
+  background(247, 241, 225);  // Reset background every frame
   push();
 
   // Move the centre
-  translate(width / 2, height / 2);
-
-  scale(scaleFactor); 
-
-  rotate(radians(-30));
-
-  translate(-430, -470);      
+  translate(width / 2, height / 2); // Move origin to center of canvas
+  scale(scaleFactor);  // Apply uniform scaling
+  rotate(radians(-30)); // Slight rotation for aesthetic layout
+  translate(-430, -470); // Final offset to align all components
 
   // Thick 5
   push();
   translate(189, 343);       
-  drawLinGroup(0, 0, 495, 2, 1, 1, 200);  
+  drawLinGroup(0, 0, 495, 2, 1, 1, 200); // Draw horizontal lines of specific length and opacity 
   pop();
 
   push();
@@ -220,5 +217,5 @@ function drawTrapezoidLines(x1, x2, x3, x4, y, h, spacing = 3, alpha = 255) {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  scaleFactor = min(width / 800, height / 600);
+  scaleFactor = min(width / 800, height / 600); // Recalculate scaling on resize
 }
